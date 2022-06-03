@@ -47,13 +47,13 @@ export  default function Time(props){
                     <div className="user-title">
                         {state ? <h2>{data[index].title}</h2> : <h2></h2>}
                         
-                    <div className="more">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                        <div className="more">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
 
-                    </div>
+                </div>
 
                     
 

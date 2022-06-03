@@ -205,6 +205,10 @@ body{
   align-items: center;
 }
 
+.user-title:hover .more span{
+  background-color: whitesmoke;
+}
+
 .user-title h2{
   font-size: 1.3rem;
   justify-self: flex-start;
