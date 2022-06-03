@@ -13,8 +13,13 @@ export  default function Time(props){
     const previous = ["36", "8", "7", "5", "10", "2"];
 
     useEffect(() =>{
-         if (data !== "" && data !== null && data !== undefined && data.length !== 0){
-            setState(true);
+        
+        setTimeDataCurrent(current[index]);
+        setTimeDataPrevious(previous[index]);
+        
+        if (data !== "" && data !== null && data !== undefined && data.length !== 0 && data[index] !== ""){
+            
+            
         
             if (time === 0){
                 setTimeDataCurrent(data[index].timeframes.daily.current);
@@ -31,14 +36,15 @@ export  default function Time(props){
                 setTimeDataPrevious(data[index].timeframes.monthly.previous);
               }
 
-              console.log(timeDataCurrent, timeDataPrevious);
+           
 
+              setState(true);
         }
     
 
 
         
-    })
+    },[current, index, previous, data, time] )
 
    
 
@@ -49,7 +55,7 @@ export  default function Time(props){
                 
                 <div className="time-user">
                     <div className="user-title">
-                        {state ? <h2>{data[index].title}</h2> : <h2></h2>}
+                        { state ? <h2>{data[index].title}</h2> : <h2>Title</h2> }
                         
                         <div className="more">
                             <span></span>
@@ -61,8 +67,10 @@ export  default function Time(props){
 
                     
 
-                    {state ? <h2>{timeDataCurrent} hours</h2> : <h2>{current[index]} hours</h2>}
-                    {state ? <p>Last week: {timeDataPrevious}hours</p> : <p>Last Week: {previous[index]}</p>}
+                    <div className="timeInfo">
+                        <h2>{timeDataCurrent} hours</h2> 
+                        <p>Last week: {timeDataPrevious}hours</p> 
+                    </div>
             
 
                 </div>
