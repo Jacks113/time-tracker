@@ -14,17 +14,17 @@ export  default function Time(props){
          if (data !== "" && data !== null && data !== undefined && data.length !== 0){
             setState(true);
         
-            if (time === 1){
+            if (time === 0){
                 setTimeDataCurrent(data[index].timeframes.daily.current);
                 setTimeDataPrevious(data[index].timeframes.daily.previous);
               }
               
-              else if (time === 2){
+              else if (time === 1){
                 setTimeDataCurrent(data[index].timeframes.weekly.current);
                 setTimeDataPrevious(data[index].timeframes.weekly.previous);
             }
               
-              else if (time === 3){
+              else if (time === 2){
                 setTimeDataCurrent(data[index].timeframes.monthly.current);
                 setTimeDataPrevious(data[index].timeframes.monthly.previous);
               }
