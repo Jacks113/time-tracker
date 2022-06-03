@@ -28,7 +28,7 @@ export  default function UserInfo(props){
                 <div className = "userInfo">
                     <figure className = "title-user">
                         <img src ="./images/image-jeremy.png" />
-                        <div>
+                        <div className="username">
                             <h2>Report for</h2>
                             {(data !== "" && data !== null && data !== undefined && data.length !== 0) ? 
                             <h1>{data[6].userName}</h1>

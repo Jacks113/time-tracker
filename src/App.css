@@ -382,6 +382,17 @@ body{
 /* Individual boxes with activities */
 /* -------------------- */
 
+.username{
+  margin-left: 2em;
+}
+
+.title-user h1{
+  font-size: 2rem;
+}
+
+
+
+
 .timeInfo{
   flex-direction: row;
   width: 90%;
@@ -432,4 +443,13 @@ body{
   body{
     font-size: 10px;
   }
+
+  
+.timeInfo{
+  width: 97%;
+}
+
+.time-user h2{
+  font-size: 1.2rem;
+}
 }
