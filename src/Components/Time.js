@@ -31,6 +31,8 @@ export  default function Time(props){
                 setTimeDataPrevious(data[index].timeframes.monthly.previous);
               }
 
+              console.log(timeDataCurrent, timeDataPrevious);
+
         }
     
 
