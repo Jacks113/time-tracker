@@ -9,6 +9,8 @@ export  default function Time(props){
     const [state, setState] = useState(false);
     const [timeDataCurrent, setTimeDataCurrent] = useState("");
     const [timeDataPrevious, setTimeDataPrevious] = useState("");
+    const current = ["32", "10", "4", "4", "5", "2"];
+    const previous = ["36", "8", "7", "5", "10", "2"];
 
     useEffect(() =>{
          if (data !== "" && data !== null && data !== undefined && data.length !== 0){
@@ -57,8 +59,8 @@ export  default function Time(props){
 
                     
 
-                    {state ? <h2>{timeDataCurrent} hours</h2> : <h2> hours</h2>}
-                    {state ? <p>Last week: {timeDataPrevious}hours</p> : <p>Last Week:</p>}
+                    {state ? <h2>{timeDataCurrent} hours</h2> : <h2>{current[index]} hours</h2>}
+                    {state ? <p>Last week: {timeDataPrevious}hours</p> : <p>Last Week: {previous[index]}</p>}
             
 
                 </div>
