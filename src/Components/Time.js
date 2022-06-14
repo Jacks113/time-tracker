@@ -50,7 +50,7 @@ export  default function Time(props){
 
     return <div className="time-container">
                 <div className="time-background">
-                    <img src= {icon} />
+                    <img alt="background-icon" src= {icon} />
                 </div>
                 
                 <div className="time-user">
